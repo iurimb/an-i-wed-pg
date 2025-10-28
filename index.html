@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna & Iuri - 10.01.2026</title>
+    
+    <!-- Fonte Great Vibes (alternativa para Catchy Mager) e Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Cores definidas pelo usuário */
+        :root {
+            --cor-fundo: #fdfbf7; /* Branco muito claro/creme */
+            --cor-principal: #1b1a19; /* Preto muito escuro/quase preto */
+            --cor-secundaria: #888; /* Cinza para detalhes */
+        }
+
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-principal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Tipografia */
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 3px; /* Aumentando o espaçamento para melhor diagramação */
+            text-transform: uppercase;
+            color: var(--cor-principal);
+            margin-bottom: 30px; /* Espaçamento padrão para títulos */
+        }
+        
+        /* Seções comuns */
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section (Home Page) - Usando a imagem como fundo */
+        .hero {
+            background-image: url('home_page_final.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: transparent; /* Esconde o texto que estava sendo usado antes */
+        }
+
+        /* Removendo a borda pontiaguda que não se encaixa mais no estilo */
+        .spike-border {
+            position: relative;
+            padding: 0;
+        }
+        
+        .spike-border::before {
+            content: none;
+        }
+        
+        /* Seção de confirmação */
+        .confirmation {
+            background: var(--cor-fundo);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: var(--cor-principal);
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid var(--cor-principal);
+            color: var(--cor-principal);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        button {
+            background: transparent;
+            color: var(--cor-principal);
+            border: 1px solid var(--cor-principal);
+            padding: 12px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+        
+        button:hover {
+            background: var(--cor-principal);
+            color: var(--cor-fundo);
+        }
+        
+        /* Seção da lista de casamento */
+        .gift-list {
+            background: var(--cor-fundo);
+        }
+
+        .gift-list p {
+            color: var(--cor-principal);
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            background: var(--cor-fundo);
+            border-top: 1px solid var(--cor-secundaria);
+        }
+
+        footer h3, footer p {
+            color: var(--cor-principal);
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--cor-principal);
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--cor-principal);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero {
+                background-size: contain; /* Ajusta a imagem para caber na tela em dispositivos móveis */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section (Home Page) - Apenas a imagem -->
+    <section class="hero">
+        <!-- Conteúdo da imagem será o fundo, não precisamos de conteúdo HTML aqui -->
+    </section>
+    
+    <!-- Confirmação de Presença -->
+    <section class="confirmation">
+        <div class="container">
+            <h2>Confirmação de Presença</h2>
+            <p style="margin-bottom: 30px; color: var(--cor-principal);">Por favor, confirme sua presença até 14 de novembro de 2025</p>
+            
+            <form id="confirmation-form">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Número de Convidados</label>
+                    <select id="guests" name="guests">
+                        <option value="1">1 pessoa</option>
+                        <option value="2" selected>2 pessoas</option>
+                        <option value="3">3 pessoas</option>
+                        <option value="4">4 pessoas</option>
+                        <option value="5">5 pessoas ou mais</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensagem (opcional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit">Confirmar Presença</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Lista de Casamento -->
+    <section class="gift-list">
+        <div class="container">
+            <h2>Lista de Casamento</h2>
+            <p style="margin-bottom: 10px;">Nossa lista de casamento está disponível nas seguintes lojas:</p>
+            <p style="margin-bottom: 20px;">Camicado, Karsten, Via Inox, Fast e Zara Home.</p>
+            <p>Para presentes em dinheiro, entre em contato conosco pessoalmente.</p>
+        </div>
+    </section>
+    
+    <!-- Rodapé e Contador -->
+    <footer>
+        <div class="container">
+            <h3 style="margin-bottom: 20px;">:</h3>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Dias</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+            <p>&copy; 2025 Anna & Iuri.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Script para o contador regressivo
+        const targetDate = new Date("Jan 10, 2026 00:00:00").getTime();
+        
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "O GRANDE DIA CHEGOU!";
+            }
+        }, 1000);
+        
+        // Simulação de submissão de formulário
+        document.getElementById('confirmation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Confirmação de presença enviada com sucesso! (Esta é uma simulação, o formulário não está conectado a um servidor)');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
