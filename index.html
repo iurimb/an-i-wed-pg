@@ -194,35 +194,7 @@
             <h2>Confirmação de Presença</h2>
             <p style="margin-bottom: 30px; color: var(--cor-principal);">Por favor, confirme sua presença até 14 de novembro de 2025</p>
             
-            <form id="confirmation-form">
-                <div class="form-group">
-                    <label for="name">Nome Completo</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="guests">Número de Convidados</label>
-                    <select id="guests" name="guests">
-                        <option value="1">1 pessoa</option>
-                        <option value="2" selected>2 pessoas</option>
-                        <option value="3">3 pessoas</option>
-                        <option value="4">4 pessoas</option>
-                        <option value="5">5 pessoas ou mais</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Mensagem (opcional)</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
-                </div>
-                
-                <button type="submit">Confirmar Presença</button>
-            </form>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6bNWNmuMTK6p7mYdrXXD8WjBqkUCDKQZQmvJ_0ZkR8rKcvg/viewform?embedded=true" style="border: 0; width: 640px; height: 1130px;" title="Formulário de Confirmação de Presença" loading="lazy">Carregando…</iframe>
         </div>
     </section>
     
@@ -286,12 +258,7 @@
             }
         }, 1000);
         
-        // Simulação de submissão de formulário
-        document.getElementById('confirmation-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Confirmação de presença enviada com sucesso! (Esta é uma simulação, o formulário não está conectado a um servidor)');
-            this.reset();
-        });
+        
     </script>
 </body>
 </html>
