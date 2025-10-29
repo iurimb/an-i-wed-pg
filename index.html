@@ -58,17 +58,21 @@
             margin: 0 auto;
         }
 
-        /* Hero Section (Home Page) - Usando a imagem como fundo */
+        /* Hero Section (Home Page) */
         .hero {
-            background-image: url('home_page.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: transparent; /* Esconde o texto que estava sendo usado antes */
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            max-height: 100vh; /* garante a imagem inteira visível sem cortes */
+            object-fit: contain;
+            display: block;
         }
 
         /* Removendo a borda pontiaguda que não se encaixa mais no estilo */
@@ -195,16 +199,14 @@
         
         /* Responsividade */
         @media (max-width: 768px) {
-            .hero {
-                background-size: contain; /* Ajusta a imagem para caber na tela em dispositivos móveis */
-            }
+            .hero img { max-height: 100vh; }
         }
     </style>
 </head>
 <body>
     <!-- Hero Section (Home Page) - Apenas a imagem -->
     <section class="hero">
-        <!-- Conteúdo da imagem será o fundo, não precisamos de conteúdo HTML aqui -->
+        <img src="home_page.png" alt="Anna & Iuri - Save the Date" loading="eager">
     </section>
     
     <!-- Confirmação de Presença -->
