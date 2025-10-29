@@ -127,6 +127,25 @@
             color: var(--cor-fundo);
         }
         
+        /* Link estilizado como botão */
+        a.btn {
+            display: inline-block;
+            background: transparent;
+            color: var(--cor-principal);
+            border: 1px solid var(--cor-principal);
+            padding: 12px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        a.btn:hover {
+            background: var(--cor-principal);
+            color: var(--cor-fundo);
+        }
+        
         /* Seção da lista de casamento */
         .gift-list {
             background: var(--cor-fundo);
@@ -193,8 +212,10 @@
         <div class="container">
             <h2>Confirmação de Presença</h2>
             <p style="margin-bottom: 30px; color: var(--cor-principal);">Por favor, confirme sua presença até 14 de novembro de 2025</p>
-            
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6bNWNmuMTK6p7mYdrXXD8WjBqkUCDKQZQmvJ_0ZkR8rKcvg/viewform?embedded=true" style="border: 0; width: 640px; height: 1130px;" title="Formulário de Confirmação de Presença" loading="lazy">Carregando…</iframe>
+            <p style="max-width: 560px; color: var(--cor-principal);">
+                Para uma experiência mais limpa e rápida, abrimos o formulário de confirmação em uma nova aba.
+            </p>
+            <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe6bNWNmuMTK6p7mYdrXXD8WjBqkUCDKQZQmvJ_0ZkR8rKcvg/viewform" target="_blank" rel="noopener">Confirmar Presença</a>
         </div>
     </section>
     
